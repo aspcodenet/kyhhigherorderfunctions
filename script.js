@@ -12,14 +12,34 @@ console.log(countries.length)
 
 
 
+
+// let result31 = countries.map(( country) => {
+//          population: country.population,
+//          countryname
+//     });
+
+
+let items = [3,4,5]
+
+//Skapa en lista där alla tal är plussade med 10
+let newResult = items.map( tal=>tal+10 )
+console.log(newResult)
+
+// console.log(result31)
 // map
 // var result = countries.Select(country=>new {  country.population, country.name })
 let result3 = countries.map(( country) => {
-    const obj = {}
-    obj.population = country.population
-    obj.name =  country.name
-    return obj;
+    return {
+         population: country.population,
+         name:  country.name
+    };
+    // const obj = {}
+    // obj.population = country.population
+    // obj.name =  country.name
+    // return obj;
 })
+
+
 console.log(result3)
 
 
@@ -37,6 +57,7 @@ console.log(result3)
 //  //Ta fram alla countries som har population > 450 000 000
 
 //  let result = countries.filter( (country)=>country.population > 450000000  );
+//  let result = countries.filter( (country)=>{return country.population > 450000000;}  );
 
 // let result2 = countries.filter((country) => {
 //     if (country.population > 450000000) return true;
